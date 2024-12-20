@@ -131,12 +131,6 @@ RAG 的主要优势有：
 
 ![获取数据库连接串](./demo/obcloud-get-connection.png)
 
-##### 修改参数启用向量模块
-
-进入实例详情页的“参数管理”，将 `ob_vector_memory_limit_percentage` 参数修改为 30 以启动向量模块。
-
-![修改参数以启用向量功能](./demo/obcloud-modify-param.png)
-
 #### 1.2 使用 Docker 启动单机版 OceanBase 数据库
 
 ##### 启动 OceanBase 容器
@@ -283,7 +277,8 @@ DB_PASSWORD=""
 您可使用我们准备好的脚本来尝试连接数据库，以确保数据库相关的环境变量设置成功：
 
 ```bash
-bash utils/connect_db.sh
+bash utils/connect_db.sh 'DB_PASSWORD'
+# 将 DB_PASSWORD 修改为自己的 OB 数据库密码
 # 如果顺利进入 MySQL 连接当中，则验证了环境变量设置成功
 ```
 

@@ -131,12 +131,6 @@ Go to the "Instance Workbench" on the instance details page, click the "Connect"
 
 ![Get Database Connection Information](./demo/obcloud-get-connection.png)
 
-##### Modify Parameters to Enable Vector Module
-
-Go to "Parameter Management" on the instance details page, and set the `ob_vector_memory_limit_percentage` parameter to 30 to enable the vector module.
-
-![Modify Parameters to Enable Vector Module](./demo/obcloud-modify-param.png)
-
 #### 1.2 Deploy an OceanBase Database with Docker
 
 ##### Start an OceanBase Container
@@ -283,7 +277,8 @@ DB_PASSWORD=""
 You can use our prepared script to try connecting to the database to ensure database-related environment variables are set correctly:
 
 ```bash
-bash utils/connect_db.sh
+bash utils/connect_db.sh 'DB_PASSWORD'
+# Modify DB_PASSWORD to your own OceanBase database password.
 # If you successfully enter the MySQL connection, this verifies that the database-related environment variables are set correctly.
 ```
 
