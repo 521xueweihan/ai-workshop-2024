@@ -21,8 +21,8 @@ def get_embedding(
     global __embedding
     if __embedding is not None:
         return __embedding
-    if all([ollama_url, ollama_token]):
-        print("Using OllamaEmbedding")
+    if all([ollama_url, ollama_model]):
+        print("Using OllamaEmbedding ollama_url:", ollama_url, "ollama_model:", ollama_model)
         __embedding = OllamaEmbedding(
             ollama_url,
             ollama_token,
@@ -237,12 +237,11 @@ class OllamaEmbedding(Embeddings):
         res = requests.post(
             self.url,
             json={"model": self.model, "input": texts},
-            headers={
-                "X-Token": self._token or "token",
-            },
+            headers={"Authorization": f"Bearer {self._token}"},
         )
         data = res.json()
         return data["embeddings"]
 
     def embed_query(self, text: str, **kwargs) -> Union[List[float], dict[int, float]]:
-        return self.embed_documents([text])[0]
+        embeddings = self.embed_documents([text])
+        return embeddings[0]
