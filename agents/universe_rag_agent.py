@@ -41,3 +41,7 @@ Please give your answer to the user's question directly according to the above r
 from agents.base import AgentBase
 
 universe_rag_agent = AgentBase(prompt=prompt, name=__name__)
+
+
+
+# 我是一个 Python 初学者，我想用 Python 编写一个有趣的网站，HelloGitHub 月刊中有什么推荐的开源项目吗？

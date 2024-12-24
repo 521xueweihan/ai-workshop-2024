@@ -8,3 +8,5 @@ doc_repos/**
 uploaded/**
 !.gitkeep
 .DS_Store
+.idea/
+.python-version

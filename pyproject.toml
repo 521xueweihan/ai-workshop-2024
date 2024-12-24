@@ -14,6 +14,8 @@ streamlit = "^1.38.0"
 pyobvector = "^0.1.14"
 langchain-oceanbase = "^0.2.0"
 python-dotenv = "^1.0.1"
+langchain-community = "^0.3.13"
+pymysql = "^1.1.1"
 
 [build-system]
 requires = ["poetry-core"]

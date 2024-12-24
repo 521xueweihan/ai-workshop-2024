@@ -36,7 +36,7 @@ tr = {
     },
     "zh": {
         "hello": "您好，请问有什么可以帮助您的吗？",
-        "title": "💬 智能问答助手",
+        "title": "💬 HellGitHub 社区助手",
         "caption": "🚀 使用 OceanBase 向量检索特性和大语言模型能力构建的智能问答机器人",
         "setting": "🔧 设置",
         "table_name_input": "表名",
