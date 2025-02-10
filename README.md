@@ -1,6 +1,6 @@
 # OceanBase AI Workshop
 
-[完整的 RAG 机器人教程](./README_zh.md)
+[完整的 RAG 机器人教程](https://mp.weixin.qq.com/s/PqlHl3jIAcNqr5zMcG1OFQ)
 
 
 ## 运行
